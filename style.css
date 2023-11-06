@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #8A51FC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo-money{    
+    width: 300px;
+    height: 300px;   
+}
+
+
+
+section{
+    width: 375px;
+    height: 712px;
+    background: #F4F4F4;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+
+select ,input{
+    width: 327px;
+    height: 48px;
+    border-radius: 4px;
+    border: solid 1px #BBBBBB ;
+    
+}
+
+.labelD{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #777777;
+    position: relative;
+    right:122px ;
+}
+
+.containerD{
+    margin-top: 44px;
+}
+
+
+.labelP{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #777777;
+    position: relative;
+    right: 118px;
+}
+
+.containerP{
+    margin-top: 44px;
+}
+
+
+
+.labelN{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #777777;
+    position: relative;
+    right:147px ;
+}
+
+.input-Num{
+    margin-top: 44px;
+}
+
+input::placeholder{
+   padding-left: 15px;
+   font-size: 16px;
+   line-height: 18px;
+   font-weight: 700;
+   color: #555555;
+}
+
+
+
