@@ -20,43 +20,40 @@
     <section>
 
         <div class="containerD">
-            <label class="labelD" for="MoneyD">Converter <span>de</span></label><br>
-            <select name="MoneyD" id="">
-                <option value="">R$ Real brasileiro</option>
-                <option value="">US$ Dólar americano</option>
-                <option value="">€ Euro</option>
+            <label class="labelD" for="MoneyD">Converter de</label><br>
+            <select name="MoneyD" id="MoneyD">
+                <option >R$ Real brasileiro</option>
             </select><br>
         </div>
         <div class="containerP">
-            <label  class="labelP" for="MoneyP">Converter <span>para</span></label><br>
-            <select name="MoneyP" id="">
-                <option value="">R$ Real brasileiro</option>
-                <option value="">US$ Dólar americano</option>
-                <option value="">€ Euro</option>
+            <label  class="labelP" for="MoneyP">Converter para</label><br>
+            <select name="MoneyP" id="currency-select">
+                <option value="dolar">US$ Dólar americano</option>
+                <option value="euro">€ Euro</option>
             </select><br>
         </div>
         <div class="input-Num">
 
             <label class="labelN"  for="ValueMoney">Valor</label><br>
-            <input  type="number" name="ValueMoney" id="" placeholder="R$ 10.000,00"><br>
+            <input  type="number" name="ValueMoney" id="ValueMoney" placeholder="R$ 10.000,00"><br>
         </div>
 
-            <button>Converter</button>
+            <button class="convertButton">Converter</button>
         
 
         <div class="containerConvert">
             <figure>
                 <img src="assets/real.png" alt="real.png">
                 <figcaption>Real</figcaption>
-                <p></p>
+                <p class="currency-valueD">R$ 0.0</p>
             </figure>
 
             <img src="assets/arrow-down_10571020.png" alt="Vector.png" class="Vector">
 
             <figure>
-                <img src="assets/dolar.png" alt="Dolar.png">
-                <figcaption>Dolar Americano</figcaption>
-                <p></p>
+                <img src="assets/dolar.png" alt="Dolar.png" class="countries">
+                <figcaption class="currency-name">Dolar Americano</figcaption>
+                <p class="currency-valueP">US$ 0.0</p>
             </figure>
 
         </div>
@@ -66,7 +63,7 @@
 
 
 
-    <script src="script.js"></script>
+    
 </body>
-
+<script src="script.js"></script>
 </html>
