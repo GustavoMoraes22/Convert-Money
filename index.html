@@ -21,8 +21,12 @@
 
         <div class="containerD">
             <label class="labelD" for="MoneyD">Converter de</label><br>
-            <select name="MoneyD" id="MoneyD">
-                <option >R$ Real brasileiro</option>
+            <select name="MoneyD" id="Convert-select" >
+                <option value="real">R$ Real brasileiro</option>
+                <option value="dolar">US$ Dólar americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="libra">€ Libra</option>
+                <option value="bitcoin">Bitcoin</option>
             </select><br>
         </div>
         <div class="containerP">
@@ -30,6 +34,10 @@
             <select name="MoneyP" id="currency-select">
                 <option value="dolar">US$ Dólar americano</option>
                 <option value="euro">€ Euro</option>
+                <option value="real">R$ Real brasileiro</option>
+                <option value="libra">€ Libra</option>
+                <option value="bitcoin">Bitcoin</option>
+
             </select><br>
         </div>
         <div class="input-Num">
@@ -43,8 +51,8 @@
 
         <div class="containerConvert">
             <figure>
-                <img src="assets/real.png" alt="real.png">
-                <figcaption>Real</figcaption>
+                <img src="assets/real.png" alt="real.png" class="countriesD">
+                <figcaption class="convert-name">Real</figcaption>
                 <p class="currency-valueD">R$ 0.0</p>
             </figure>
 
