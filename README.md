@@ -14,4 +14,4 @@
   <img align="center" alt="Gustavo-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
 </div>
 
-<h3 align="center" >Projeto feito em conjunto com <strong>DevClub</strong></h3>
+<h3 align="center" >Projeto feito para converter moedas </h3>
