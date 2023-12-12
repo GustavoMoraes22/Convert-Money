@@ -2,57 +2,59 @@
 
 fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
 
-const convertButton = document.querySelector('.convert-button')
-const currencySelect = document.querySelector('.currency-select')
+const convertButton = document.querySelector(".convertButton")
+const currencySelect = document.querySelector("#currency-select")
+
+
 
 function convertValues() {
-    const inputCurrencyValue = document.querySelector('.input-currency').value
-    const currencyValueToConvert = document.querySelector(
-        '.currency-value-to-convert',
-    ) // Valor em Real
-    const currencyValueConverted = document.querySelector('.currency-value') // Outras moedas
+    const ValueMoney = document.querySelector("#ValueMoney").value//valor que vai ser convertido
 
-    const dolarToday = 5.2
-    const euroToday = 6.2
+    const currencyValueD = document.querySelector(".currency-valueD")//valor em real
 
-    if (currencySelect.value == 'dolar') {
-        // Se o select estiver selecionado o valor de dolar, entre aqui
-        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-        }).format(inputCurrencyValue / dolarToday)
+    const currencyValueP = document.querySelector(".currency-valueP")//outras moedas
+
+    const euroToday = 5.24
+    const dolarToday = 4.89
+
+    if (currencySelect.value == "dolar") {//se o select selecionado o valor dolar, vai entrar aqui
+        currencyValueP.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(ValueMoney / dolarToday)//colocar o valor convertido na tela
+    }
+    if (currencySelect.value == "euro") {//se o select selecionado o valor euro, vai entrar aqui
+        currencyValueP.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(ValueMoney / euroToday)//colocar o valor convertido na tela
     }
 
-    if (currencySelect.value == 'euro') {
-        // Se o select estiver selecionado o valor de euro, entre aqui
-        currencyValueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
-            style: 'currency',
-            currency: 'EUR',
-        }).format(inputCurrencyValue / euroToday)
-    }
+    currencyValueD.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(ValueMoney)//colocar o valor convertido na tela
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-    }).format(inputCurrencyValue)
+
 }
 
 function changeCurrency() {
-    const currencyName = document.getElementById('currency-name')
-    const currencyImage = document.querySelector('.currency-img')
+    const currencyName = document.querySelector(".currency-name")
+    const currencyImg = document.querySelector(".countries")
 
-    if (currencySelect.value == 'dolar') {
-        currencyName.innerHTML = 'Dólar americano'
-        currencyImage.src = './assets/dolar.png'
+    if (currencySelect.value == "dolar") {
+        currencyName.innerHTML = "Dólar americano"
+        currencyImg.src = "assets/dolar.png"
     }
 
-    if (currencySelect.value == 'euro') {
-        currencyName.innerHTML = 'Euro'
-        currencyImage.src = './assets/euro.png'
+    if (currencySelect.value == "euro") {
+        currencyName.innerHTML = "Euro"
+        currencyImg.src = "assets/Euro.png"
     }
 
     convertValues()
 }
 
-currencySelect.addEventListener('change', changeCurrency)
-convertButton.addEventListener('click', convertValues)
+
+currencySelect.addEventListener("change", changeCurrency)
+convertButton.addEventListener("click", convertValues)
