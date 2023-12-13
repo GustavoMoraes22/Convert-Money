@@ -2,19 +2,24 @@
 const convertButton = document.querySelector(".convertButton")
 const currencySelect = document.querySelector("#currency-select")
 
-const data = fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
 
 
-const euroToday = 5.24
-const dolarToday = 4.89
 
 
-function convertValues() {
+//converter do real para outra moeda
+const convertValues = async () => {
     const ValueMoney = document.querySelector("#ValueMoney").value//valor que vai ser convertido
 
     const currencyValueD = document.querySelector(".currency-valueD")//valor em real
 
     const currencyValueP = document.querySelector(".currency-valueP")//outras moedas
+
+
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+    const euroToday = data.EURBRL.high
+    const dolarToday = data.USDBRL.high
+
 
     if (currencySelect.value == "dolar") {//se o select selecionado o valor dolar, vai entrar aqui
         currencyValueP.innerHTML = new Intl.NumberFormat("en-US", {
@@ -37,6 +42,7 @@ function convertValues() {
 
 }
 
+//ira trocar a img das moedas que serao convertidas
 function changeCurrency() {
     const currencyName = document.querySelector(".currency-name")
     const currencyImg = document.querySelector(".countries")
